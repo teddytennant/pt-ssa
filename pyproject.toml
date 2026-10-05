@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pt-ssa"
+version = "0.1.0"
+description = "JAX implementation of parallel time-aligned spiking self-attention (arXiv:2610.03291)"
+requires-python = ">=3.10"
+dependencies = [
+    "jax",
+    "numpy",
+    "pytest",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
